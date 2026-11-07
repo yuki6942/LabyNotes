@@ -1,25 +1,24 @@
-package org.example.core;
+package de.yuki6942.labynotes;
 
 import net.labymod.api.addon.LabyAddon;
 import net.labymod.api.models.addon.annotation.AddonMain;
-import org.example.core.commands.ExamplePingCommand;
-import org.example.core.listener.ExampleGameTickListener;
+
 
 @AddonMain
-public class ExampleAddon extends LabyAddon<ExampleConfiguration> {
+public class LabyNotesAddon extends LabyAddon<LabyNotesConfiguration> {
+
+  private
 
   @Override
   protected void enable() {
     this.registerSettingCategory();
 
-    this.registerListener(new ExampleGameTickListener(this));
-    this.registerCommand(new ExamplePingCommand());
-
+    this
     this.logger().info("Enabled the Addon");
   }
 
   @Override
-  protected Class<ExampleConfiguration> configurationClass() {
-    return ExampleConfiguration.class;
+  protected Class<LabyNotesConfiguration> configurationClass() {
+    return LabyNotesConfiguration.class;
   }
 }
