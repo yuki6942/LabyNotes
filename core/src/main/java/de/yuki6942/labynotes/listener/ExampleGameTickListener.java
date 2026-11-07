@@ -3,13 +3,13 @@ package org.example.core.listener;
 import net.labymod.api.event.Phase;
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.client.lifecycle.GameTickEvent;
-import org.example.core.ExampleAddon;
+import org.example.core.LabyNotesAddon;
 
 public class ExampleGameTickListener {
 
-  private final ExampleAddon addon;
+  private final LabyNotesAddon addon;
 
-  public ExampleGameTickListener(ExampleAddon addon) {
+  public ExampleGameTickListener(LabyNotesAddon addon) {
     this.addon = addon;
   }
 
